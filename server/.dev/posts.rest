@@ -1,0 +1,46 @@
+@baseurl = http://localhost:8800/api/posts
+
+### CREATE ###
+POST {{baseurl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "62620bb412a019f796e4cf1d",
+  "desc": "imane 2",
+  "img": "image.png"
+}
+
+### UPDATE ###
+PUT {{baseurl}}/62621b5dd7cdb64359bb66fc HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "62620975dbad3748230ee719",
+  "desc": "First Post (updated)" 
+}
+
+### DELETE ###
+DELETE {{baseurl}}/62621bcfd7cdb64359bb66fe HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "62620bb412a019f796e4cf1d"
+}
+
+### LIKE/DISLIKE ###
+PUT {{baseurl}}/62621b5dd7cdb64359bb66fc/like HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "62620bb412a019f796e4cf1d"
+}
+
+### GET POST ###
+GET {{baseurl}}/62621b5dd7cdb64359bb66fc HTTP/1.1
+
+### GET TIMELINE POSTS ###
+GET {{baseurl}}/timeline/62620975dbad3748230ee719 HTTP/1.1
+Content-Type: application/json
+
+### GET USER POSTS ###
+GET {{baseurl}}/profile/3rfan HTTP/1.1

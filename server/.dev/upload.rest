@@ -1,0 +1,13 @@
+@baseurl = http://localhost:8800/api/upload
+
+### UPLOAD IMAGE FILE ###
+POST {{baseurl}} HTTP/1.1
+Accept: application/json
+Content-Type: multipart/form-data; boundary=Boundary
+
+--Boundary
+Content-Disposition: form-data; name="file"; filename="memories.png"
+Content-Type: image/png
+
+< ./memories.png
+--Boundary--

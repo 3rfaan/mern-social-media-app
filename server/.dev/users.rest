@@ -1,0 +1,40 @@
+@baseurl = http://localhost:8800/api/users
+
+### UPDATE ###
+PUT {{baseurl}}/62620bb412a019f796e4cf1d HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "62620bb412a019f796e4cf1d",
+  "password": "123456"
+}
+
+### DELETE ###
+DELETE {{baseurl}}/62622b0c7537f3e548a63d0c HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "62622b0c7537f3e548a63d0c"
+}
+
+### GET USER ###
+GET {{baseurl}}?userId=62620975dbad3748230ee719 HTTP/1.1
+
+### GET FRIENDS ###
+GET {{baseurl}}/friends/62620975dbad3748230ee719 HTTP/1.1
+
+### FOLLOW ###
+PUT {{baseurl}}/62620bb412a019f796e4cf1d/follow HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "62620975dbad3748230ee719"
+}
+
+### UNFOLLOW ###
+PUT {{baseurl}}/62620bb412a019f796e4cf1d/unfollow HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId": "62620975dbad3748230ee719"
+}

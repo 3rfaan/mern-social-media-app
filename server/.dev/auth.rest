@@ -1,0 +1,20 @@
+@baseurl = http://localhost:8800/api/auth
+
+### REGISTER ###
+POST {{baseurl}}/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "3rfan",
+  "email": "zubi.arfan@gmail.com",
+  "password": "123456"
+}
+
+### LOGIN ###
+POST {{baseurl}}/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "zubi.arfan@gmail.com",
+  "password": "1234"
+}

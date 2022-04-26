@@ -1,0 +1,14 @@
+@baseurl = http://localhost:8800/api/messages
+
+### CREATE ###
+POST {{baseurl}} HTTP/1.1
+Content-Type: application/json
+
+{
+  "conversationId": "6265c6d0db02f03304a7eb10",
+  "sender": "62620bb412a019f796e4cf1d",
+  "text": "This is a message"
+}
+
+### GET MESSAGES ###
+GET {{baseurl}}/6265ca3275d62fc3d7aff4c5 HTTP/1.1
